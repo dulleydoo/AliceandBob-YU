@@ -6,17 +6,19 @@ public class Greeting {
         System.out.println("Enter Your Name");
         String name = scan.nextLine();
 
+        boolean trueOrFalse = true;
+        while (trueOrFalse) {
+            if (name.equals("Bob") | name.equals("Alice")) {
+                System.out.println("Hello There " + name);
+                trueOrFalse = false;
 
-        if (name.equals("Bob") | name.equals("Alice")) {
-            System.out.println("Hello There");
+            } else {
+                System.out.println("Try again");
+                name = scan.nextLine();
 
 
+            }
 
         }
-        else {
-            System.out.println("You dont belong here");
-
-        }
-
     }
 }
