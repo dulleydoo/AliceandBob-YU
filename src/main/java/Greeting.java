@@ -8,7 +8,7 @@ public class Greeting {
 
         boolean trueOrFalse = true;
         while (trueOrFalse) {
-            if (name.equals("Bob") | name.equals("Alice")) {
+            if (name.equalsIgnoreCase("Bob") | name.equalsIgnoreCase("Alice")) {
                 System.out.println("Hello There " + name);
                 trueOrFalse = false;
 
