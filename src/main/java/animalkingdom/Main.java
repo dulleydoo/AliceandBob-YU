@@ -12,15 +12,16 @@ public class Main {
 
         Dog dog1 = new Dog("bobby", "dogfood", "ruff ruff", 10, true);
 
-        Cat cat = new Cat("bobby", "catfood", "moew moew", 10);
+        Cat cat = new Cat("bobby", "catfood", "moew moew", 10, true);
 
-        Lion lion = new Lion("Lion", "meat", "Rawr", 2);
-
-
+        Lion lion = new Lion("Lion", "meat", "Rawr", 2, 5);
 
         Animal[] animals = {dog1, cat, lion};
+        for(int x = 0; x < animals.length; x++)
+        Animal.animalFood(animals[x]);
 
-        Animal.animalFood(cat);
+
+
 
 
 //        Animal.makeNoise(dog1);

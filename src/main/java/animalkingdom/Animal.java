@@ -23,43 +23,50 @@ public class Animal {
         this.noise = noise;
         this.age = age;
     }
+
     //getter method
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    public String getNoise(){
+
+    public String getNoise() {
         return this.noise;
     }
+
     //setter method
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
-    public void setNoise(String noise){
+
+    public void setNoise(String noise) {
         this.noise = noise;
     }
-    public static void makeNoise(Animal animal){
-        if(animal instanceof Dog){
+
+    public static void makeNoise(Animal animal) {
+        if (animal instanceof Dog) {
             System.out.println(animal.noise);
-        }else if (animal instanceof Cat) {
+        } else if (animal instanceof Cat) {
             System.out.println(animal.noise);
 
-        } else{
+        } else {
             System.out.println("");
 
         }
 
     }
-    public static void animalFood(Animal animal){
-        if (animal instanceof Dog){
+
+    public static void animalFood(Animal animal ) {
+        if (animal instanceof Dog) {
             System.out.println(animal.food);
-        }else if(animal instanceof Cat){
+        } else if (animal instanceof Cat) {
             System.out.println(animal.food);
-        } else if (animal instanceof Lion){
+        } else if (animal instanceof Lion) {
             System.out.println(animal.food);
-        } else{
+        } else
             System.out.println("");
-        }
-    }
+
+
 //Everybody will create a method that takes an array of animals and prints out each animals name.
 
+    }
 }
