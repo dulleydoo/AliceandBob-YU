@@ -1,17 +1,14 @@
 package animalkingdom;
 
-public class Lion extends Animal{
-    private int numberOfMates;
-    public Lion(String name, String food, String noise, int age, int numberOfMates) {
-        super(name, food, noise, age);
-        this.numberOfMates = numberOfMates;
+public class Lion extends Pet {
+    public Lion() {
     }
 
-    public int getNumberOfMates() {
-        return numberOfMates;
+    public Lion(String name) {
+        super(name);
     }
 
-    public void setNumberOfMates(int numberOfMates) {
-        this.numberOfMates = numberOfMates;
+    public void makeNoise() {
+        System.out.println( getName() + " is Rawring");
     }
 }

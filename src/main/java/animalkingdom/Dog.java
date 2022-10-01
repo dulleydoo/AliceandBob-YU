@@ -1,17 +1,14 @@
 package animalkingdom;
 
-public class Dog extends Animal {
-    private boolean tail;
-    public Dog(String name, String food, String noise, int age, boolean tail) {
-        super(name, food, noise, age);
-        this.tail = tail;
+public class Dog extends Pet {
+    public Dog() {
     }
 
-    public boolean isTail() {
-        return tail;
+    public Dog(String name) {
+        super(name);
     }
 
-    public void setTail(boolean tail) {
-        this.tail = tail;
+    public void makeNoise() {
+        System.out.println(getName()+ " says woof woof");
     }
 }

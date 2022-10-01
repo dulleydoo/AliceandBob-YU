@@ -1,19 +1,14 @@
 package animalkingdom;
 
-public class Cat extends Animal{
-
-    private boolean evil;
-
-    public boolean isEvil() {
-        return evil;
+public class Cat extends Pet {
+    public Cat() {
     }
 
-    public void setEvil(boolean evil) {
-        this.evil = evil;
+    public Cat(String name) {
+        super(name);
     }
 
-    public Cat(String name, String food, String noise, int age, boolean evil) {
-        super(name, food, noise, age);
-        this.evil = evil;
+    public void makeNoise() {
+        System.out.println(getName() + " says meow meow");
     }
 }

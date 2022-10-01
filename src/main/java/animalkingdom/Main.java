@@ -1,35 +1,42 @@
 package animalkingdom;
-
+import java.util.Scanner;
 public class Main {
 
+
+    //main method
     public static void main(String[] args) {
-        Animal dog = new Animal("doggy", "dogfood", "ruff ruff", 10 );
-        //dog.name = "Bob";
-        dog.setName("Bob");
-        dog.setNoise("rawr");
-//        System.out.println(dog.getName());
-//        System.out.println(dog.getNoise());
+        Scanner input = new Scanner(System.in);
 
-        Dog dog1 = new Dog("bobby", "dogfood", "ruff ruff", 10, true);
+        //ask user how many pets they have. this is stored into integer numberOfPets
+        System.out.println("How many pets do you have?");
+        int numberOfPets = input.nextInt();
+        input.skip(System.lineSeparator());
 
-        Cat cat = new Cat("bobby", "catfood", "moew moew", 10, true);
+        //new object array of Pet class has the length of numberOfPets(whatever number the user said)
+        Pet[] listOfPets = new Pet[numberOfPets];
 
-        Lion lion = new Lion("Lion", "meat", "Rawr", 2, 5);
+        //create loop that asks for what type of pet the animal is. use if statements to check if it matches any of the child classes and make new objects from those child classes if true
+        for (int i = 0; i < listOfPets.length; i++) {
+            System.out.println("What type of pet is Pet #" + (i+1) + "?");
+            String typeOfPet = input.nextLine();
+            if (typeOfPet.equalsIgnoreCase("Dog")){
+                listOfPets[i] = new Dog();
+            }else if (typeOfPet.equalsIgnoreCase("Cat")){
+                listOfPets[i] = new Cat();
+            }else if (typeOfPet.equalsIgnoreCase("Lion")) {
+                listOfPets[i] = new Lion();
+            }else {
+                listOfPets[i] = new Pet();
+            }
+        }
 
-        Animal[] animals = {dog1, cat, lion};
-        for(int x = 0; x < animals.length; x++)
-        Animal.animalFood(animals[x]);
 
 
+        //invoke the makeNoise method on all the elements of the object array
+        for (int i = 0; i < listOfPets.length; i++){
+            System.out.print("Pet #" + (i+1) +": ");
+            listOfPets[i].makeNoise();
+        }
 
-
-
-//        Animal.makeNoise(dog1);
-//        Animal.makeNoise(cat);
-
-        //Animal cat = new Animal("catty", "Catfood", "Moew moew", 13);
-
-//        System.out.println(dog);
-//        System.out.println(cat);
     }
 }
